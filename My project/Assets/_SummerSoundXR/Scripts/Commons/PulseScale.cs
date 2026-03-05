@@ -17,6 +17,11 @@ public class PulseScale : MonoBehaviour
         scaleMult += scaleAdd;
     }
 
+    public void TriggerPulse(float scaleValue)
+    {
+        scaleMult += scaleValue;
+    }
+
     private void Update()
     {
         scaleMult = Mathf.Lerp(scaleMult, 1f, scaleLerp);

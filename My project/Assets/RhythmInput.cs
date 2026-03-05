@@ -28,13 +28,15 @@ public class RhythmInput : MonoBehaviour
         if (!preparing)
             return;
         
-        pulseScale.TriggerPulse();
-        
         beatCounter++;
         if (beatCounter > beatsUntilActive)
         {
             EnableBeat();
             beatCounter = 0;
+        }
+        else
+        {
+            pulseScale.TriggerPulse();
         }
     }
 
@@ -52,10 +54,12 @@ public class RhythmInput : MonoBehaviour
         
         timeOnHit = Time.time;
         Debug.LogError(timeOnHit - timeOnEnable);
+        pulseScale.TriggerPulse(-.5f);
     }
 
     private void DisableBeat()
     {
+        preparing = false;
         beatEnabled = false;
     }
 }

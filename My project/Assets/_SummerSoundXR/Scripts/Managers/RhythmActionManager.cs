@@ -17,8 +17,6 @@ public class RhythmActionManager : MonoBehaviour
         if (!int.TryParse(beatMap.text[beatIndex].ToString(), out int buttonIndex))
             return;
         
-        Debug.LogError($"{buttonIndex} at index {beatIndex}");
-        
-        rhythmInputs[beatIndex].PrepareBeatHit();
+        rhythmInputs[buttonIndex].PrepareBeatHit();
     }
 }
