@@ -1181,6 +1181,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_Button_Middle
       objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountDownBeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RhythmInput, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8662975572688881854, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1263,6 +1275,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_Button_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1890409336483426998}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountDownBeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RhythmInput, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8662975572688881854, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1277,6 +1305,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2630131087053031874, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
   m_PrefabInstance: {fileID: 2977222167135099790}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890409336483426998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3705656069942192440, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+  m_PrefabInstance: {fileID: 2977222167135099790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda86f9804f16b240bd7c8ed6614e104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7587595845022425986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1345,6 +1384,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_Button_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6494662041996233402}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountDownBeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213485663499852376, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+      propertyPath: onBeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RhythmInput, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8662975572688881854, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1359,3 +1414,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2630131087053031874, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
   m_PrefabInstance: {fileID: 7587595845022425986}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6494662041996233402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3705656069942192440, guid: c4e45f779208dad4ca1bbf4de6254528, type: 3}
+  m_PrefabInstance: {fileID: 7587595845022425986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda86f9804f16b240bd7c8ed6614e104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

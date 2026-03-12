@@ -8,13 +8,14 @@ public class RhythmManager : MonoBehaviour
     public delegate void BeatEvent();
     public static event BeatEvent onBeat;
     
-    [SerializeField] private float timeBeforeStart, bpm;
+    [SerializeField] private float bpm, beatDelay;
     private float t, bpmInSeconds;
     [Tooltip("x - measure; y - beat;")]
     public Vector2 beats;
     [SerializeField] private int beatsPerMeasure = 4;
     private bool pause = true;
 
+    
     private void Awake()
     {
         if(Instance == null)
@@ -25,10 +26,16 @@ public class RhythmManager : MonoBehaviour
 
         bpmInSeconds = 60f / bpm;
     }
+    
+    public float SecondsPerBeat()
+    {
+        return bpmInSeconds;
+    }
 
     public void StartSong()
     {
         pause = false;
+        t += beatDelay;
         GetComponent<AudioSource>().Play();
     }
     

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PulseScale : MonoBehaviour
 {
-    [SerializeField] private float scaleAdd, scaleLerp;
+    [SerializeField] private float scaleAdd = .3f, scaleLerp = .5f;
     private float scaleMult;
     private Vector3 originalScale;
     
