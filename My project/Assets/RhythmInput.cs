@@ -53,7 +53,7 @@ public class RhythmInput : MonoBehaviour
             return;
         
         timeOnHit = Time.time;
-        Debug.LogError(timeOnHit - timeOnEnable);
+        
         pulseScale.TriggerPulse(-.5f);
     }
 

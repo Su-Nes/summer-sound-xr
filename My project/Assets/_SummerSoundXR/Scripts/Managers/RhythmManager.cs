@@ -24,11 +24,9 @@ public class RhythmManager : MonoBehaviour
             Destroy(gameObject);
 
         bpmInSeconds = 60f / bpm;
-        
-        Invoke(nameof(StartSong), timeBeforeStart);
     }
 
-    private void StartSong()
+    public void StartSong()
     {
         pause = false;
         GetComponent<AudioSource>().Play();

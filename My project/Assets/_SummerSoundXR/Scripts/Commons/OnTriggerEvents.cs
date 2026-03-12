@@ -10,7 +10,9 @@ public class OnTriggerEvents : MonoBehaviour
         onStay,
         onExit
     }
-    
+
+    [SerializeField] private bool destroyOnTrigger;
+    [SerializeField] private string targetTag = "Player";
     [SerializeField] private UnityEvent onTriggerEvent;
     [SerializeField] private TriggerType triggerType;
     
@@ -20,7 +22,7 @@ public class OnTriggerEvents : MonoBehaviour
         if (triggerType != TriggerType.onEnter)
             return;
         
-        onTriggerEvent.Invoke();
+        InvokeEvent(other.gameObject.tag);
     }
     
     private void OnTriggerStay(Collider other)
@@ -28,7 +30,7 @@ public class OnTriggerEvents : MonoBehaviour
         if (triggerType != TriggerType.onStay)
             return;
         
-        onTriggerEvent.Invoke();
+        InvokeEvent(other.gameObject.tag);
     }
     
     private void OnTriggerExit(Collider other)
@@ -36,6 +38,17 @@ public class OnTriggerEvents : MonoBehaviour
         if (triggerType != TriggerType.onExit)
             return;
         
+        InvokeEvent(other.gameObject.tag);
+    }
+    
+    private void InvokeEvent(string tag)
+    {
+        if (targetTag != tag)
+            return;
+        
         onTriggerEvent.Invoke();
+        
+        if (destroyOnTrigger)
+            Destroy(gameObject);
     }
 }
