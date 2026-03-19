@@ -8,17 +8,30 @@ public class RhythmActionManager : MonoBehaviour
     [SerializeField] private TextAsset beatMap;
     [SerializeField] private RhythmInput[] rhythmInputs;
 
+    private string[] beatMapLines;
+    private int beatLine;
+
+    private void Start()
+    {
+        beatMapLines = beatMap.text.Split('\n');
+    }
+
     public void ReadBeat()
     {
-        string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y} "; 
-        
-        int beatIndex = beatMap.text.IndexOf(beatString, StringComparison.Ordinal) + beatString.Length;
-        
-        
-        
-        if (!int.TryParse(beatMap.text[beatIndex].ToString(), out int buttonIndex))
+        string currentLine = beatMapLines[beatLine];
+        string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y} ";
+
+        if (!currentLine.Contains(beatString))
             return;
         
-        rhythmInputs[buttonIndex].PrepareBeatHit();
+        string beatIndexes = currentLine.Substring(beatString.Length);
+        
+        // trigger all beat indexes
+        foreach (string beatIndex in beatIndexes.Split(' '))
+        {
+            rhythmInputs[int.Parse(beatIndex)].PrepareBeatHit();
+        }
+
+        beatLine++;
     }
 }
