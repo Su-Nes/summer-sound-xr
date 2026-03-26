@@ -14,6 +14,8 @@ public class RhythmActionManager : MonoBehaviour
         
         int beatIndex = beatMap.text.IndexOf(beatString, StringComparison.Ordinal) + beatString.Length;
         
+        
+        
         if (!int.TryParse(beatMap.text[beatIndex].ToString(), out int buttonIndex))
             return;
         
