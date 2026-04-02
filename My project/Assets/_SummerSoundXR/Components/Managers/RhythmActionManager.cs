@@ -20,7 +20,7 @@ public class RhythmActionManager : MonoBehaviour
     {
         string currentLine = beatMapLines[beatLine];
         string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y};";
-        Debug.LogError($"{currentLine} and {beatString}");
+
         if (!currentLine.Contains(beatString))
             return;
         //Debug.LogError(beatString);

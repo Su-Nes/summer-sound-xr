@@ -1,5 +1,8 @@
 using System;
+using System.Numerics;
+using Unity.Mathematics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -11,6 +14,11 @@ public class ScoreManager : MonoBehaviour
     public delegate void BadScore();
     public static event BadScore onBadScore;
 
+
+    [SerializeField] private Transform scoreRepresentative;
+    [SerializeField] private float scoreRepresentativeDistanceAmplitude, addScoreValue, removeScoreValue;
+    private float score;
+
     private void Awake()
     {
         if (instance == null)
@@ -18,14 +26,43 @@ public class ScoreManager : MonoBehaviour
         else 
             Destroy(gameObject);
     }
+
+    private void OnEnable()
+    {
+        onGoodScore += AddScore;
+        onBadScore += RemoveScore;
+    }
     
-    public void OnGoodScore()
+    private void OnDisable()
+    {
+        onGoodScore -= AddScore;
+        onBadScore -= RemoveScore;
+    }
+
+    public static void OnGoodScore()
     {
         onGoodScore?.Invoke();
     }
 
-    public void OnBadScore()
+    public static void OnBadScore()
     {
         onBadScore?.Invoke();
+    }
+
+    private void Update()
+    {
+        Vector3 scoreRepresentativePos = Vector3.zero;
+        scoreRepresentativePos.x = math.remap(-1f, 1f, -scoreRepresentativeDistanceAmplitude, scoreRepresentativeDistanceAmplitude, score);
+        scoreRepresentative.localPosition = scoreRepresentativePos;
+    }
+
+    public void AddScore()
+    {
+        score += addScoreValue;
+    }
+
+    public void RemoveScore()
+    {
+        score += removeScoreValue;
     }
 }

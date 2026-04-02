@@ -70,13 +70,13 @@ public class RhythmInput : MonoBehaviour
     {
         if (beatEnabled)
         {
-            ScoreManager.instance.OnGoodScore();
+            ScoreManager.OnGoodScore();
             GameObject hitEffect = Instantiate(positiveHitGraphicPrefab, transform.position, Quaternion.identity);
             Destroy(hitEffect, 1f);
         }
         else
         {
-            ScoreManager.instance.OnBadScore();
+            ScoreManager.OnBadScore();
             GameObject hitEffect = Instantiate(negativeHitGraphicPrefab, transform.position, Quaternion.identity);
             Destroy(hitEffect, 1f);
         }
