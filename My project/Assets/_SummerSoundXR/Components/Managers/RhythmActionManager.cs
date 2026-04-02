@@ -19,11 +19,11 @@ public class RhythmActionManager : MonoBehaviour
     public void ReadBeat()
     {
         string currentLine = beatMapLines[beatLine];
-        string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y} ";
-
+        string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y};";
+        Debug.LogError($"{currentLine} and {beatString}");
         if (!currentLine.Contains(beatString))
             return;
-        
+        //Debug.LogError(beatString);
         string beatIndexes = currentLine.Substring(beatString.Length);
         
         // trigger all beat indexes

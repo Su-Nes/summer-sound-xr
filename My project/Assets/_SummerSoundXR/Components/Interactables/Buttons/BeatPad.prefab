@@ -184,7 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatsUntilActive: 3
   rhythmGraphicTf: {fileID: 7057645301453171882}
-  hitGraphicPrefab: {fileID: 3154055100098228805, guid: 53e311be9ed634a48b6cea25f1be9022, type: 3}
+  positiveHitGraphicPrefab: {fileID: 3154055100098228805, guid: 53e311be9ed634a48b6cea25f1be9022, type: 3}
+  negativeHitGraphicPrefab: {fileID: 0}
   timeActive: 0.5
   graphicScaleMod: 1
 --- !u!114 &1377276837874863410
