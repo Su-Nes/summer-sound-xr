@@ -12,7 +12,7 @@ public class RhythmManager : MonoBehaviour
     private float t, bpmInSeconds;
     [Tooltip("x - measure; y - beat;")]
     public Vector2 beats;
-    [SerializeField] private int beatsPerMeasure = 4;
+    [SerializeField] private int beatOffset, beatsPerMeasure = 4;
     private bool pause = true;
 
     
@@ -35,7 +35,7 @@ public class RhythmManager : MonoBehaviour
     public void StartSong()
     {
         pause = false;
-        t += beatDelay;
+        t += beatDelay + beatOffset * SecondsPerBeat();
         GetComponent<AudioSource>().Play();
     }
     
