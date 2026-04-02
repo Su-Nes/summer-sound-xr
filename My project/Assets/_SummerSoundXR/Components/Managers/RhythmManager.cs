@@ -8,11 +8,11 @@ public class RhythmManager : MonoBehaviour
     public delegate void BeatEvent();
     public static event BeatEvent onBeat;
     
-    [SerializeField] private float bpm, beatDelay;
+    [SerializeField] private float bpm, beatDelay, beatOffset;
     private float t, bpmInSeconds;
     [Tooltip("x - measure; y - beat;")]
     public Vector2 beats;
-    [SerializeField] private int beatOffset, beatsPerMeasure = 4;
+    [SerializeField] private int beatsPerMeasure = 4;
     private bool pause = true;
 
     

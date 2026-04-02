@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(PulseScale))]
 [RequireComponent(typeof(EventOnRhythm))]
@@ -7,7 +8,7 @@ public class RhythmInput : MonoBehaviour
 {
     [SerializeField] private int beatsUntilActive = 3;
     [SerializeField] private Transform rhythmGraphicTf;
-    [SerializeField] private GameObject hitGraphicPrefab;
+    [SerializeField] private GameObject positiveHitGraphicPrefab, negativeHitGraphicPrefab;
     private int beatCounter;
     [SerializeField] private float timeActive = .5f, graphicScaleMod;
     private float timeOnEnable, timeOnHit, timeUntilBeat, t, graphicStartZ;
@@ -23,7 +24,7 @@ public class RhythmInput : MonoBehaviour
     {
         preparing = true;
         t = 0f;
-        
+
         rhythmGraphicTf.gameObject.SetActive(true);
     }
 
@@ -67,15 +68,23 @@ public class RhythmInput : MonoBehaviour
 
     public void HitBeat()
     {
-        if (!beatEnabled)
-            return;
+        if (beatEnabled)
+        {
+            ScoreManager.instance.OnGoodScore();
+            GameObject hitEffect = Instantiate(positiveHitGraphicPrefab, transform.position, Quaternion.identity);
+            Destroy(hitEffect, 1f);
+        }
+        else
+        {
+            ScoreManager.instance.OnBadScore();
+            GameObject hitEffect = Instantiate(negativeHitGraphicPrefab, transform.position, Quaternion.identity);
+            Destroy(hitEffect, 1f);
+        }
         
         timeOnHit = Time.time;
         
         // effects
         GetComponent<PulseScale>().TriggerPulse();
-        GameObject hitEffect = Instantiate(hitGraphicPrefab, transform.position, Quaternion.identity);
-        Destroy(hitEffect, 1f);
         
         DisableBeat();
     }
