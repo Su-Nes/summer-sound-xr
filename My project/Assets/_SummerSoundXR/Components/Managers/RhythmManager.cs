@@ -33,6 +33,11 @@ public class RhythmManager : MonoBehaviour
         if (GetComponent<AudioSource>() != null)
             GetComponent<AudioSource>().Play();
     }
+
+    public void StopBeat()
+    {
+        pause = true;
+    }
     
     private void Update()
     {

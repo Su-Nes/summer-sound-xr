@@ -396,11 +396,11 @@ Transform:
   m_GameObject: {fileID: 294291213}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710665, y: -0, z: -0, w: 0.70710695}
-  m_LocalPosition: {x: -17.399956, y: 2.8999805, z: 5.1168194}
-  m_LocalScale: {x: 25.560028, y: 100, z: 7.321261}
+  m_LocalPosition: {x: -1.0239999, y: 0.7850001, z: 0.43799996}
+  m_LocalScale: {x: 0.25560027, y: 1, z: 0.07321261}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1828860384}
+  m_Father: {fileID: 2025720519}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &294291215
 MeshCollider:
@@ -447,7 +447,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4f1ef37ae953c484bbc5d5e4049147e5, type: 2}
+  - {fileID: 2100000, guid: f345a7da65a4345e688c85316fa60832, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf86a3fda9a23f5488a4f0680ba838c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythmManager: {fileID: 0}
+  rhythmManager: {fileID: 1829753232}
   beatMap: {fileID: 4900000, guid: 535e4dfe0e8565d48b07cc44eb3952d2, type: 3}
   rhythmInputs:
   - {fileID: 1448555557}
@@ -891,7 +891,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targetRhythmManager: {fileID: 0}
+  targetRhythmManager: {fileID: 1829753232}
 --- !u!4 &596817353
 Transform:
   m_ObjectHideFlags: 0
@@ -1535,7 +1535,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  targetRhythmManager: {fileID: 0}
+  targetRhythmManager: {fileID: 1829753232}
 --- !u!65 &838612700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1610,6 +1610,151 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838612696}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &850277058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2025720519}
+    m_Modifications:
+    - target: {fileID: 875102345546567064, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_Name
+      value: EndCalibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.281
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7980101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.32962173
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4662965
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.19260584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -44.887
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -60.598
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2609617168877546403, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_text
+      value: End calibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 2609617168877546403, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: m_fontSize
+      value: 32.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2025720518}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2025720518}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1053864247}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartBeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RhythmManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636368815559120261, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      propertyPath: onTriggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4829499042481860515, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+--- !u!4 &850277059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2529241670101902612, guid: 11d06eb17006c8941bf722e22d1de88c, type: 3}
+  m_PrefabInstance: {fileID: 850277058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &929886561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +2946,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1172737076}
-  - {fileID: 294291214}
   m_Father: {fileID: 2025720519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2835,7 +2979,7 @@ MonoBehaviour:
   shape: 0
   curveRadius: 1
   overlapMask: 0
-  compositionMode: 1
+  compositionMode: 2
   _overlayEnabled: 1
 --- !u!114 &1828860386
 MonoBehaviour:
@@ -3335,7 +3479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1587137295}
-  delayText: {fileID: 0}
+  delayText: {fileID: 1172737077}
   songRhythmManager: {fileID: 1829753232}
 --- !u!114 &1874292920
 MonoBehaviour:
@@ -3930,8 +4074,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 294291214}
   - {fileID: 1828860384}
   - {fileID: 1874292917}
+  - {fileID: 850277059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2132264229

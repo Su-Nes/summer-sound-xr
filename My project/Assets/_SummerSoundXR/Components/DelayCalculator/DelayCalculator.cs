@@ -15,7 +15,7 @@ public class DelayCalculator : MonoBehaviour
 
     private void Start()
     {
-        endPos = transform.up * .1f;
+        endPos = transform.position + transform.right * .3f;
         
         StopCalibration();
         delayText.text = "Delay: 0s";
@@ -25,18 +25,20 @@ public class DelayCalculator : MonoBehaviour
     {
         buttonText.text = "Hit me!";
         beatCount = requiredBeatCount;
+        GetComponent<RhythmManager>().StartBeat();
     }
 
     private void StopCalibration()
     {
         buttonText.text = "Start calibration";
+        GetComponent<RhythmManager>().StopBeat();
     }
     
     public void GetBeatOrigin()
     {
         if (requiredBeatCount == 0)
             return;
-        
+        Debug.LogError("FUUUUUCKKK");
         beatTime = Time.time;
         GetComponent<AudioSource>().Play();
 
@@ -52,7 +54,10 @@ public class DelayCalculator : MonoBehaviour
         beatCount--;
 
         if (beatCount <= 0)
+        {
             transform.position = endPos;
+            StopCalibration();
+        }
     }
 
     private void CalibrateDelay()
