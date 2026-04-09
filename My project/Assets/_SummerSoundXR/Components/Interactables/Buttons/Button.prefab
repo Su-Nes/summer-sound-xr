@@ -344,7 +344,7 @@ MonoBehaviour:
   shape: 0
   curveRadius: 1
   overlapMask: 0
-  compositionMode: 2
+  compositionMode: 1
   _overlayEnabled: 1
 --- !u!114 &6285430160588686810
 MonoBehaviour:

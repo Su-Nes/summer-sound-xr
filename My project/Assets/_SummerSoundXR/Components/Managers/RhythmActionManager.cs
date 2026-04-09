@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(EventOnRhythm))]
 public class RhythmActionManager : MonoBehaviour
 {
+    [SerializeField] private RhythmManager rhythmManager;
     [SerializeField] private TextAsset beatMap;
     [SerializeField] private RhythmInput[] rhythmInputs;
 
@@ -19,7 +20,7 @@ public class RhythmActionManager : MonoBehaviour
     public void ReadBeat()
     {
         string currentLine = beatMapLines[beatLine];
-        string beatString = $"{RhythmManager.Instance.beats.x}.{RhythmManager.Instance.beats.y};";
+        string beatString = $"{rhythmManager.beats.x}.{rhythmManager.beats.y};";
 
         if (!currentLine.Contains(beatString))
             return;

@@ -5,14 +5,15 @@ using UnityEngine.Events;
 public class EventOnRhythm : MonoBehaviour
 {
     [SerializeField] private UnityEvent onBeatEvent;
+    [SerializeField] private RhythmManager targetRhythmManager;
     private void OnEnable()
     {
-        RhythmManager.onBeat += OnBeatInvoke;
+        targetRhythmManager.onBeat += OnBeatInvoke;
     }
 
     private void OnDisable()
     {
-        RhythmManager.onBeat -= OnBeatInvoke;
+        targetRhythmManager.onBeat -= OnBeatInvoke;
     }
 
     public void OnBeatInvoke()

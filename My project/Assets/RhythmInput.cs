@@ -13,10 +13,12 @@ public class RhythmInput : MonoBehaviour
     [SerializeField] private float timeActive = .5f, graphicScaleMod;
     private float timeOnEnable, timeOnHit, timeUntilBeat, t, graphicStartZ;
     private bool preparing, beatEnabled;
+
+    [SerializeField] private RhythmManager songRhythmManager;
     
     private void Start()
     {
-        timeUntilBeat = beatsUntilActive - 1 * RhythmManager.Instance.SecondsPerBeat();
+        timeUntilBeat = beatsUntilActive - 1 * songRhythmManager.SecondsPerBeat();
         graphicStartZ =  rhythmGraphicTf.localScale.z;
     }
 

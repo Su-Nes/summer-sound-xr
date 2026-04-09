@@ -4,11 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class RhythmManager : MonoBehaviour
 {
-    public static RhythmManager Instance;
     public delegate void BeatEvent();
-    public static event BeatEvent onBeat;
+    public event BeatEvent onBeat;
     
-    [SerializeField] private float bpm, beatDelay, beatOffset;
+    [SerializeField] private float bpm, beatOffset;
+    public float beatDelay;
     private float t, bpmInSeconds;
     [Tooltip("x - measure; y - beat;")]
     public Vector2 beats;
@@ -18,12 +18,6 @@ public class RhythmManager : MonoBehaviour
     
     private void Awake()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-        }else 
-            Destroy(gameObject);
-
         bpmInSeconds = 60f / bpm;
     }
     
@@ -32,11 +26,12 @@ public class RhythmManager : MonoBehaviour
         return bpmInSeconds;
     }
 
-    public void StartSong()
+    public void StartBeat()
     {
         pause = false;
         t += beatDelay + beatOffset * SecondsPerBeat();
-        GetComponent<AudioSource>().Play();
+        if (GetComponent<AudioSource>() != null)
+            GetComponent<AudioSource>().Play();
     }
     
     private void Update()
