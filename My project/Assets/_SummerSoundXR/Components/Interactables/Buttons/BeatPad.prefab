@@ -112,7 +112,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.00000001707302, y: 0.0000018989069, z: 0.399591}
 --- !u!114 &6213485663499852376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  targetRhythmManager: {fileID: 0}
 --- !u!114 &6559119295400430553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,9 +186,10 @@ MonoBehaviour:
   beatsUntilActive: 3
   rhythmGraphicTf: {fileID: 7057645301453171882}
   positiveHitGraphicPrefab: {fileID: 3154055100098228805, guid: 53e311be9ed634a48b6cea25f1be9022, type: 3}
-  negativeHitGraphicPrefab: {fileID: 0}
+  negativeHitGraphicPrefab: {fileID: 3154055100098228805, guid: c87edb5811ea23d44930aa667d763e2e, type: 3}
   timeActive: 0.5
   graphicScaleMod: 1
+  songRhythmManager: {fileID: 0}
 --- !u!114 &1377276837874863410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleAdd: 0.3
   scaleLerp: 0.5
+  disableColliderOnPulse: 0
 --- !u!1 &7925577745538403704
 GameObject:
   m_ObjectHideFlags: 0

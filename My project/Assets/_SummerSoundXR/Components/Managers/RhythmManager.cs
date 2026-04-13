@@ -29,7 +29,7 @@ public class RhythmManager : MonoBehaviour
     public void StartBeat()
     {
         pause = false;
-        t += beatDelay + beatOffset * SecondsPerBeat();
+        t += -beatDelay + beatOffset * SecondsPerBeat();
         if (GetComponent<AudioSource>() != null)
             GetComponent<AudioSource>().Play();
     }

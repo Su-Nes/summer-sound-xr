@@ -60,6 +60,7 @@ public class RhythmInput : MonoBehaviour
 
     private void EnableBeat()
     {
+        Debug.LogError("Beat enabled!!!");
         beatEnabled = true;
         timeOnEnable = Time.time;
         

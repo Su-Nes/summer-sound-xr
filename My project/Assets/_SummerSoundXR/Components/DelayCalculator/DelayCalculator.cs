@@ -68,6 +68,6 @@ public class DelayCalculator : MonoBehaviour
         float delay = playerInputTime - beatTime;
         songRhythmManager.beatDelay = delay;
         
-        delayText.text = $"Delay: {delay}s";
+        delayText.text = $"Delay: {delay:F2}s";
     }
 }

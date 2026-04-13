@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
 
 
     [SerializeField] private Transform scoreRepresentative;
-    [SerializeField] private float scoreRepresentativeDistanceAmplitude, addScoreValue, removeScoreValue;
+    [SerializeField] private float scoreRepresentativeDistanceAmplitude, addScoreValue, removeScoreValue, scoreDecay;
     private float score;
 
     private void Awake()
@@ -51,6 +51,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
+        score = Mathf.Clamp(score, -1f, 1f);
+        score -= scoreDecay * Time.deltaTime;
+        
         Vector3 scoreRepresentativePos = Vector3.zero;
         scoreRepresentativePos.x = math.remap(-1f, 1f, -scoreRepresentativeDistanceAmplitude, scoreRepresentativeDistanceAmplitude, score);
         scoreRepresentative.localPosition = scoreRepresentativePos;
