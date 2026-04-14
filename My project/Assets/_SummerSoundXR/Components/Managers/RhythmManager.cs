@@ -14,6 +14,7 @@ public class RhythmManager : MonoBehaviour
     public Vector2 beats;
     [SerializeField] private int beatsPerMeasure = 4;
     private bool pause = true;
+    public bool Pause => pause;
 
     
     private void Awake()
@@ -29,7 +30,7 @@ public class RhythmManager : MonoBehaviour
     public void StartBeat()
     {
         pause = false;
-        t += -beatDelay + beatOffset * SecondsPerBeat();
+        t += beatDelay + beatOffset * SecondsPerBeat();
         if (GetComponent<AudioSource>() != null)
             GetComponent<AudioSource>().Play();
     }

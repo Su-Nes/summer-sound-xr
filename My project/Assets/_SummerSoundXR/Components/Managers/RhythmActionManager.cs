@@ -35,4 +35,12 @@ public class RhythmActionManager : MonoBehaviour
 
         beatLine++;
     }
+
+    /*public void ResetInputs()
+    {
+        foreach (RhythmInput rhythmInput in rhythmInputs)
+        {
+            rhythmInput.Reset();
+        }
+    }*/
 }

@@ -17,7 +17,10 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private Transform scoreRepresentative;
     [SerializeField] private float scoreRepresentativeDistanceAmplitude, addScoreValue, removeScoreValue, scoreDecay;
+    [SerializeField] private RhythmManager songRhythmManager;
+    
     private float score;
+    private bool scoreIsCounting;
 
     private void Awake()
     {
@@ -51,6 +54,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
+        if (songRhythmManager.Pause)
+            return;
+        
         score = Mathf.Clamp(score, -1f, 1f);
         score -= scoreDecay * Time.deltaTime;
         

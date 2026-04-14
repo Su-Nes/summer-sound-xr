@@ -184,11 +184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatsUntilActive: 3
-  rhythmGraphicTf: {fileID: 7057645301453171882}
+  rhythmGraphic: {fileID: 8316454514284147160}
   positiveHitGraphicPrefab: {fileID: 3154055100098228805, guid: 53e311be9ed634a48b6cea25f1be9022, type: 3}
   negativeHitGraphicPrefab: {fileID: 3154055100098228805, guid: c87edb5811ea23d44930aa667d763e2e, type: 3}
   timeActive: 0.5
-  graphicScaleMod: 1
   songRhythmManager: {fileID: 0}
 --- !u!114 &1377276837874863410
 MonoBehaviour:
@@ -203,91 +202,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleAdd: 0.3
-  scaleLerp: 0.5
-  disableColliderOnPulse: 0
---- !u!1 &7925577745538403704
-GameObject:
+  scaleLerp: 0.2
+  disableColliderOnPulse: 1
+--- !u!1001 &7703747281987799198
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7057645301453171882}
-  - component: {fileID: 3521628339865299007}
-  - component: {fileID: 8924120660230868184}
-  m_Layer: 2
-  m_Name: RhythmGraphicModel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7057645301453171882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925577745538403704}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2630131087053031874}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3521628339865299007
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2630131087053031874}
+    m_Modifications:
+    - target: {fileID: 510168593058317798, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_Name
+      value: RhythmGraphicModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+--- !u!4 &7057645301453171882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 799668570615292980, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+  m_PrefabInstance: {fileID: 7703747281987799198}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925577745538403704}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8924120660230868184
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!114 &8316454514284147160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1837695178716625222, guid: f378cdcc2a5ea82478c2058c13a921c9, type: 3}
+  m_PrefabInstance: {fileID: 7703747281987799198}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925577745538403704}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1ca0e81b87a8f7747990a2c7735ecbb4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436aa24725c37444db4902a4cc9a2496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

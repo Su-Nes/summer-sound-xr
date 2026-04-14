@@ -7,42 +7,20 @@ using UnityEngine.Serialization;
 public class RhythmInput : MonoBehaviour
 {
     [SerializeField] private int beatsUntilActive = 3;
-    [SerializeField] private Transform rhythmGraphicTf;
+    [SerializeField] private ScaleDownWithTime rhythmGraphic;
     [SerializeField] private GameObject positiveHitGraphicPrefab, negativeHitGraphicPrefab;
     private int beatCounter;
-    [SerializeField] private float timeActive = .5f, graphicScaleMod;
-    private float timeOnEnable, timeOnHit, timeUntilBeat, t, graphicStartZ;
+    [SerializeField] private float timeActive = .5f;
+    private float timeOnEnable, timeOnHit;
     private bool preparing, beatEnabled;
 
     [SerializeField] private RhythmManager songRhythmManager;
-    
-    private void Start()
-    {
-        timeUntilBeat = beatsUntilActive - 1 * songRhythmManager.SecondsPerBeat();
-        graphicStartZ =  rhythmGraphicTf.localScale.z;
-    }
 
     public void PrepareBeatHit()
     {
         preparing = true;
-        t = 0f;
 
-        rhythmGraphicTf.gameObject.SetActive(true);
-    }
-
-    private void Update()
-    {
-        ScaleRhythmGraphic();
-    }
-
-    private void ScaleRhythmGraphic()
-    {
-        if (!preparing)
-            return;
-        
-        t += Time.deltaTime;
-        Vector3 graphicScale = new Vector3(1f + (timeUntilBeat - t) * graphicScaleMod, 1f + (timeUntilBeat - t) * graphicScaleMod, graphicStartZ);
-        rhythmGraphicTf.localScale = graphicScale;
+        rhythmGraphic.InitializeGraphic(beatsUntilActive - 1 * songRhythmManager.SecondsPerBeat());
     }
 
     public void CountDownBeat()
@@ -60,11 +38,8 @@ public class RhythmInput : MonoBehaviour
 
     private void EnableBeat()
     {
-        Debug.LogError("Beat enabled!!!");
         beatEnabled = true;
         timeOnEnable = Time.time;
-        
-        rhythmGraphicTf.gameObject.SetActive(false);
         
         Invoke(nameof(DisableBeat), timeActive);
     }
@@ -83,7 +58,7 @@ public class RhythmInput : MonoBehaviour
             GameObject hitEffect = Instantiate(negativeHitGraphicPrefab, transform.position, Quaternion.identity);
             Destroy(hitEffect, 1f);
         }
-        
+
         timeOnHit = Time.time;
         
         // effects

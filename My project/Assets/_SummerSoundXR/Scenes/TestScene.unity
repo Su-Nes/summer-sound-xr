@@ -931,13 +931,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626172199}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2174977, y: 1.4925221, z: -0.03789878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2174977, y: 0.5225221, z: -0.6968988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1352907460}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1053864248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &626172201
 MonoBehaviour:
@@ -954,8 +954,9 @@ MonoBehaviour:
   scoreRepresentative: {fileID: 838612697}
   scoreRepresentativeDistanceAmplitude: 1.2
   addScoreValue: 0.2
-  removeScoreValue: -0.33
-  scoreDecay: 1
+  removeScoreValue: -0.1
+  scoreDecay: 0.1
+  songRhythmManager: {fileID: 1829753232}
 --- !u!1001 &799557424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1987,6 +1988,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 626172200}
   - {fileID: 1067125023}
   - {fileID: 1852990215}
   - {fileID: 929886566}
@@ -2895,7 +2897,7 @@ GameObject:
   - component: {fileID: 1829753232}
   - component: {fileID: 1829753234}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: RhythmAudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3765,7 +3767,7 @@ Transform:
   m_GameObject: {fileID: 2025720518}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.97, z: 0.65900004}
+  m_LocalPosition: {x: 1, y: 0.97, z: 0.784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4543,10 +4545,6 @@ PrefabInstance:
       propertyPath: songRhythmManager
       value: 
       objectReference: {fileID: 1829753232}
-    - target: {fileID: 4129358093309443989, guid: 598ddcf857f6cd0479820d6e2bcd7cd6, type: 3}
-      propertyPath: negativeHitGraphicPrefab
-      value: 
-      objectReference: {fileID: 3154055100098228805, guid: c87edb5811ea23d44930aa667d763e2e, type: 3}
     - target: {fileID: 4250300255773785746, guid: 598ddcf857f6cd0479820d6e2bcd7cd6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4627,10 +4625,6 @@ PrefabInstance:
       propertyPath: songRhythmManager
       value: 
       objectReference: {fileID: 1829753232}
-    - target: {fileID: 6494662041996233402, guid: 598ddcf857f6cd0479820d6e2bcd7cd6, type: 3}
-      propertyPath: negativeHitGraphicPrefab
-      value: 
-      objectReference: {fileID: 3154055100098228805, guid: c87edb5811ea23d44930aa667d763e2e, type: 3}
     - target: {fileID: 6636603304491044085, guid: 598ddcf857f6cd0479820d6e2bcd7cd6, type: 3}
       propertyPath: targetRhythmManager
       value: 
@@ -5209,7 +5203,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1085460470}
   - {fileID: 1829753233}
-  - {fileID: 626172200}
   - {fileID: 596817353}
   - {fileID: 832575519}
   - {fileID: 453903762}
