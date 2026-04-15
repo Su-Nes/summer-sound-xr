@@ -187,7 +187,7 @@ MonoBehaviour:
   rhythmGraphic: {fileID: 8316454514284147160}
   positiveHitGraphicPrefab: {fileID: 3154055100098228805, guid: 53e311be9ed634a48b6cea25f1be9022, type: 3}
   negativeHitGraphicPrefab: {fileID: 3154055100098228805, guid: c87edb5811ea23d44930aa667d763e2e, type: 3}
-  timeActive: 0.5
+  goodTimingRange: 0.33
   songRhythmManager: {fileID: 0}
 --- !u!114 &1377276837874863410
 MonoBehaviour:
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111e89a63adefd5469f81637ccceaa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleAdd: 0.3
-  scaleLerp: 0.2
+  scaleAdd: -0.3
+  scaleLerp: 0.1
   disableColliderOnPulse: 1
 --- !u!1001 &7703747281987799198
 PrefabInstance:

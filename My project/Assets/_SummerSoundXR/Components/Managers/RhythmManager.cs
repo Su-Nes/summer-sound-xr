@@ -6,8 +6,12 @@ public class RhythmManager : MonoBehaviour
 {
     public delegate void BeatEvent();
     public event BeatEvent onBeat;
-    
-    [SerializeField] private float bpm, beatOffset;
+
+    [SerializeField] private AudioSource targetAudioSource;
+    [SerializeField] private float bpm;
+    [Tooltip("Audio delay in BEATS. Whole values recommended.")]
+    [SerializeField] private float beatOffset;
+    [Tooltip("Audio delay in SECONDS.")]
     public float beatDelay;
     private float t, bpmInSeconds;
     [Tooltip("x - measure; y - beat;")]
@@ -31,8 +35,7 @@ public class RhythmManager : MonoBehaviour
     {
         pause = false;
         t += beatDelay + beatOffset * SecondsPerBeat();
-        if (GetComponent<AudioSource>() != null)
-            GetComponent<AudioSource>().Play();
+        targetAudioSource.Play();
     }
 
     public void StopBeat()
@@ -47,14 +50,14 @@ public class RhythmManager : MonoBehaviour
         
         t += Time.deltaTime;
         
-        if (t >= bpmInSeconds)
+        if (t > bpmInSeconds)
         {
             InvokeOnBeat();
             t = 0f;
         }
     }
 
-    public void InvokeOnBeat()
+    private void InvokeOnBeat()
     {
         beats.y++;
 

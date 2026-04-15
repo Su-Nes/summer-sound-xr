@@ -57,8 +57,14 @@ public class ScoreManager : MonoBehaviour
         if (songRhythmManager.Pause)
             return;
         
+        
+        if (score > 0f)
+            score -= scoreDecay * Time.deltaTime;
+        else
+            score = 0f;
+        
+        
         score = Mathf.Clamp(score, -1f, 1f);
-        score -= scoreDecay * Time.deltaTime;
         
         Vector3 scoreRepresentativePos = Vector3.zero;
         scoreRepresentativePos.x = math.remap(-1f, 1f, -scoreRepresentativeDistanceAmplitude, scoreRepresentativeDistanceAmplitude, score);

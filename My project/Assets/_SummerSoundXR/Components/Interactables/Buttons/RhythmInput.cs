@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,43 +11,22 @@ public class RhythmInput : MonoBehaviour
     [SerializeField] private ScaleDownWithTime rhythmGraphic;
     [SerializeField] private GameObject positiveHitGraphicPrefab, negativeHitGraphicPrefab;
     private int beatCounter;
-    [SerializeField] private float timeActive = .5f;
-    private float timeOnEnable, timeOnHit;
-    private bool preparing, beatEnabled;
+    [SerializeField] private float goodTimingRange = .33f;
+    private float timeOnEnable;
 
     [SerializeField] private RhythmManager songRhythmManager;
-
+    
     public void PrepareBeatHit()
     {
-        preparing = true;
+        float timeUntilBeat = (beatsUntilActive - 1) * songRhythmManager.SecondsPerBeat();
+        timeOnEnable = Time.time + timeUntilBeat;
 
-        rhythmGraphic.InitializeGraphic(beatsUntilActive - 1 * songRhythmManager.SecondsPerBeat());
-    }
-
-    public void CountDownBeat()
-    {
-        if (!preparing)
-            return;
-        
-        beatCounter++;
-        if (beatCounter > beatsUntilActive)
-        {
-            EnableBeat();
-            beatCounter = 0;
-        }
-    }
-
-    private void EnableBeat()
-    {
-        beatEnabled = true;
-        timeOnEnable = Time.time;
-        
-        Invoke(nameof(DisableBeat), timeActive);
+        rhythmGraphic.InitializeGraphic(timeUntilBeat);
     }
 
     public void HitBeat()
     {
-        if (beatEnabled)
+        if (CalculateHit(Time.time))
         {
             ScoreManager.OnGoodScore();
             GameObject hitEffect = Instantiate(positiveHitGraphicPrefab, transform.position, Quaternion.identity);
@@ -58,18 +38,13 @@ public class RhythmInput : MonoBehaviour
             GameObject hitEffect = Instantiate(negativeHitGraphicPrefab, transform.position, Quaternion.identity);
             Destroy(hitEffect, 1f);
         }
-
-        timeOnHit = Time.time;
         
         // effects
         GetComponent<PulseScale>().TriggerPulse();
-        
-        DisableBeat();
     }
 
-    private void DisableBeat()
+    private bool CalculateHit(float timeOnHit)
     {
-        preparing = false;
-        beatEnabled = false;
+        return MathF.Abs(timeOnEnable - timeOnHit) < goodTimingRange;
     }
 }
