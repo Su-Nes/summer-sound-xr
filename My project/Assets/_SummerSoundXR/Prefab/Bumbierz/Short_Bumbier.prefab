@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 6185138809949570190}
   - component: {fileID: 1980379478583856174}
   - component: {fileID: 5256526141007847816}
+  - component: {fileID: 8426909257706557292}
   - component: {fileID: 249850480941353802}
   m_Layer: 0
   m_Name: Short_Bumbier
@@ -524,6 +525,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8426909257706557292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619923887903642809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7739854ce84e5e458f5bdf219fe1aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dancingThreshold: 0.75
+  angryThreshold: -0.5
+  faceRenderer: {fileID: 4049098981252026628}
+  angryFace: {fileID: 21300000, guid: 35c161df442025b4f8c18941b486a504, type: 3}
 --- !u!95 &249850480941353802
 Animator:
   serializedVersion: 7

@@ -20,6 +20,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private RhythmManager songRhythmManager;
     
     private float score;
+    public float Score => score;
     private bool scoreIsCounting;
 
     private void Awake()

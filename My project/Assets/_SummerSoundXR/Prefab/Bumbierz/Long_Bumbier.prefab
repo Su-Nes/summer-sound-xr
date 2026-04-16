@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2065129322957140189}
   - component: {fileID: 8567600459153235556}
   - component: {fileID: 2539679276212404474}
+  - component: {fileID: 8102429182288248709}
   - component: {fileID: 5355834470225851752}
   m_Layer: 0
   m_Name: Long_Bumbier
@@ -93,6 +94,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8102429182288248709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626009797038096206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7739854ce84e5e458f5bdf219fe1aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dancingThreshold: 0.75
+  angryThreshold: -0.5
+  faceRenderer: {fileID: 32904568714405794}
+  angryFace: {fileID: 21300000, guid: f41af759d4759ad48802e1266ee04c0e, type: 3}
 --- !u!95 &5355834470225851752
 Animator:
   serializedVersion: 7
